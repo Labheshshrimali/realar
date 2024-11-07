@@ -1,0 +1,768 @@
+.golden-btn {
+    padding: 12px 24px;
+    border: none;
+    color: rgb(1, 7, 68);
+    background-color: rgb(243, 197, 81);
+    border-radius: 10px;
+}
+.h-100{
+    min-height: 100vh!important;
+}
+
+.nav-item {
+    position: relative;
+}
+.dd1 {
+    width: 200px;
+    height: 0;
+    top: 72px;
+    z-index: -11111111;
+    transition: z-index 50ms , height 700ms;
+    background-color: gray;
+    position: absolute;
+    overflow: hidden;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item:hover .dd1 {
+    height: 200px;
+    z-index: 11111;
+    transition: 1s all linear;
+
+    transition: z-index 50ms , height 2000ms;
+
+
+}
+.dd1:hover {
+    height: 200px;
+    z-index: 11111;
+    transition: 1s all linear;
+
+    transition: z-index 1000ms , height 2000ms;
+
+
+}
+
+.box {
+    /* border: 2px solid red; */
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.sp1 {
+    width: 80%;
+    /* border: .5px solid white; */
+}
+.sp2 {
+    width: 50%;
+    /* border: .5px solid white; */
+    transition: .5s all linear;
+
+}
+.box:hover .sp2 {
+    width: 80%;
+    transition: .5s all linear;
+}
+
+
+/* second */
+
+.image-hover{
+    width: 90%;
+    mask-image: url(Realar_files/about-1-mask.png);
+    mask-size: 100% 100%;
+    overflow: hidden;
+}
+
+.image-hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(140deg, rgba(0,0,0,0) 34%, rgba(255,255,255,0.351) 50%,rgba(255,255,255,0) 63%);
+
+}
+
+.image-hover:hover::before{
+    left: 100%;
+    transition: .3s linear;
+}
+/* home page */
+
+.home-page {
+    /* border: 5px solid red; */
+    border-radius: 30px;
+    animation: image-anime 15s linear infinite;
+    background-position: center;
+}
+
+@keyframes image-anime {
+    0%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 105%;
+    }
+    25%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 115%;
+    }
+    30%{
+        background-image: url(Realar_files/hero_bg_1_2.png);
+        background-size: 105%;
+    }
+    55%{
+        background-image: url(Realar_files/hero_bg_1_2.png);
+        background-size: 115%;
+    }
+    60%{
+        background-image: url(Realar_files/hero_bg_1_3.png);
+        background-size: 105%;
+    }
+    95%{
+        background-image: url(Realar_files/hero_bg_1_3.png);
+        background-size: 115%;
+    }
+    100%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 105%;
+    }
+}
+
+.left{
+    height: 100vh;
+    /* border: 5px solid white; */
+    overflow: hidden;
+    
+}
+.left-1{
+    animation: text-anime 15s linear infinite;
+    transform: translateY(-100%);
+}
+.left-2{
+    animation: text-anime 15s linear infinite;
+    transform: translateY(-100%);
+    animation-delay: 4.5s;
+}
+
+.left-3{
+    animation: text-anime 15s linear infinite;
+    transform: translateY(-100%);
+    animation-delay: 9s;
+}
+
+
+
+.left-p1{
+    animation: p-anime 15s linear infinite;
+    transform: translateY(200%);
+    bottom: 15%;
+    /* border: 1px solid red; */
+
+}
+.left-p2{
+    animation: p-anime 15s linear infinite;
+    transform: translateY(200%);
+    bottom: 15%;
+    animation-delay: 4.5s;
+    position: absolute;
+}
+
+.left-p3{
+    animation: p-anime 15s linear infinite;
+    transform: translateY(200%);
+    bottom: 15%;
+    animation-delay: 9s;
+
+}
+@keyframes text-anime {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15%{
+        transform: translateY(30%);
+        opacity: 1;
+    }
+    24%{
+        transform: translateY(30%);
+        opacity: 1;
+    }
+    28%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    
+}
+
+
+@keyframes p-anime {
+    0%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    15%{
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+    24%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    28%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    
+}
+
+
+.right{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play{
+    width: 130px;
+    height: 130px!important;
+    background-color: rgba(255,255,255,0.345);
+    color: white;
+}
+.play-anime{
+    animation: border-scales 3s linear infinite;
+}
+.play-anime:nth-child(2){
+    animation-delay: 1.5s;
+}
+@keyframes border-scales {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.6);
+    }
+    
+}
+
+
+.anime img{
+    mask-image: url(Realar_files/maskkkkkk.jpeg);
+    mask-size: 100% 100%;
+}
+
+
+h1.a-h1{
+    -webkit-text-stroke: 1px rgba(255,255,255,0.327);
+    font-size: 6vw;
+    font-family: serif;
+    color: transparent;
+}
+
+
+/* text */
+
+.text {
+    font-weight: lighter;
+    letter-spacing: 1.7px;
+    font-size: 13px;
+    fill: white;
+}
+
+#rotatingText {
+    animation-name: rotate-circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+/* @keyframes rotate circle {
+    to {
+        transform : rotate(1turn);
+        
+    }
+
+    
+} */
+
+.main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.main img {
+    position: absolute;
+
+}
+
+.main img {
+    position: absolute;
+    filter: drop-shadow(0px 0px 5px #333);
+}
+
+
+/* image slider */
+
+.dad-slide{
+    animation-name: slides;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+
+
+}
+
+
+@keyframes slides{
+    0% {
+        transform: translateX(0);
+    }
+
+    12%{
+        transform: translateX(0px);
+    }
+    17%{
+        transform: translateX(-420px);
+    }
+    28%{
+        transform: translateX(-420px);
+    }
+    33%{
+        transform: translateX(-835px);
+    }
+    45%{
+        transform: translateX(-835px);
+    }
+    50%{
+        transform: translateX(-1270px);
+    }
+    65%{
+        transform: translateX(-127px);
+    }
+    70%{
+        transform: translateX(-1600px);
+    }
+    80%{
+        transform: translateX(-1600px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+/* text slider */
+
+
+.float-img {
+    animation-name: float-image;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float-image {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    
+}
+.feedslider{
+    animation-name: lb;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+@keyframes lb {
+    0%{
+        transform: translateX(0);
+    }
+    
+    29%{
+        transform: translateX(0);
+    }
+    
+    34%{
+        transform: translateX(-100%);
+    }
+    
+    63%{
+        transform: translateX(-100%);
+    }
+    
+    68%{
+        transform: translateX(-200%);
+    }
+    
+    95%{
+        transform: translateX(-200%);
+    }
+    
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+/* card slider */
+
+.card-h{
+    background-image: url(Realar_files/aminities1-1.png);
+
+    background-position: center;
+    background-size: cover;
+    mask-image: url(Realar_files/aminities-shape1.png);
+    mask-size: 100% 100%;
+    position: relative;
+    animation-name: card-loop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite ;
+}
+
+.card-h ::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    transition: .2s linear;
+}
+
+.card-h :hover::before{
+    background-color: rgba(0,0,0,0.301);
+    transition: .3s linear;
+}
+
+.card-h img {
+    transition: .3s linear;
+}
+
+.card-h:hover img {
+    transition: .3s linear;
+    transform: scaleX(-1);
+}
+
+@keyframes card-loop{
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-112%);
+    }
+    45%{
+        transform: translateX(-112%);
+    }
+    50%{
+        transform: translateX(-225%);
+    }
+    70%{
+        transform: translateX(-225%);
+    }
+    75%{
+        transform: translateX(-340%);
+    }
+    85%{
+        transform: translateX(-340%);
+    }
+    90%{
+        transform: translateX(-454.80%);
+    }
+    100%{
+        transform: translateX(-454.80%);
+    }
+    
+}
+
+
+/* card-second height */
+.seventh-secion-card-con{
+   width: 100%;
+   /* height: 500px; */
+}
+
+.S-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 20px;
+    transition: all .3s linear;
+}
+
+@media only screen and (max-width:596px) {
+    
+
+    .seventh-secion-card-icon{
+        justify-content: center!important;
+    }
+    .S-first-row{
+        height: 250px;
+    }
+    .S-card{
+        height: 400px;
+    }
+}
+
+.S-card-img-1{
+    background-image: url(Realar_files/team_1_1.png);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.S-card-img-2{
+    background-image: url(Realar_files/team_1_2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.S-card-img-3{
+    background-image: url(Realar_files/team_1_3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.S-card-inner{
+    width: 95%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgba(28,45,55,0.712);
+    backdrop-filter: blur(2px);
+    transition: all .3s linear;
+}
+
+.S-card:hover .S-card-inner{
+    height: 95%;
+    transition: all .3s linear;
+}
+
+.S-card-inner-box-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.S-card-inner-box-1 h2{
+    color: rgba(255,255,255,0.747);
+}
+
+.S-card-inner-box-1 p{
+    color: rgba(255,255,255,0.747);
+}
+
+.S-card-inner-box-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    opacity: 0;
+    gap: 10px;
+}
+
+.S-card:hover .S-card-inner-box-2{
+    display: flex;
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+.property-icon {
+    transition: all .3s linear;
+}
+
+.property-icon:hover {
+    transform: scaleX(-1);
+    transition: all .3s linear;
+
+}
+
+
+
+
+
+/*  */
+.footer-hov a{
+    color: rgba(0, 0, 0, 0.74);
+    transition: all .2s linear;
+}
+
+.footer-hov a:hover{
+    color: white;
+    transition: all .2s linear;
+}
+
+
+
+
+
+
+
+.phone ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.062);
+}
+
+
+/*  */
+
+.animation-div{
+    /* border: 3px s  olid red!important; */
+    animation-name: slideranimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes slideranimation{
+    0%{
+      transform: translateX(0);
+    }
+    20%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(-100%);
+    }
+    45%{
+      transform: translateX(-100%);
+    }
+    50%{
+      transform: translateX(-200%);
+    }
+    70%{
+      transform: translateX(-200%);
+    }
+    75%{
+      transform: translateX(-300%);
+      
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  .animation-div:hover  .imgdiv::before{
+    content: "";
+    background-image: url(Realar_files/project_shape1_1.png);
+     transition:  .3s ease-in-out;
+    background-size: cover;
+     position: absolute;
+     width: 70%;
+     height: 70%;
+    background-color: rgba(62, 29, 58, 0.278);
+  }
+  
+  
+  .image-anime img{
+    mask-image: url(Realar_files/maskkkkkk.jpeg)!important;
+    mask-size: 100% 100%!important;
+    /* border: 4px solid red; */
+  }
+
+
+  /*  */
+
+  .lb img{
+    mask-image: url(Realar_files/about-1-mask.png);
+    mask-size: 100% 100%!important;
+
+  }
+
+  .lb {
+    width: 90%;
+    overflow: hidden;
+    
+    mask-image: url(Realar_files/about-1-mask.png);
+    mask-size: 100% 100%!important;
+
+    
+  }
+
+.lb::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(140deg, rgba(0,0,0,0) 34%, rgba(255,255,255,0.351) 50%, rgba(255,255,255,0) 63%);
+}
+  
+.lb:hover::before{
+    left: 100%;
+    transition: .3s linear;
+}
+
+.splash {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 111111;
+    left: -100%;
+    animation-name: splashanime;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.splash img {
+    width: 30%;
+}
+
+@keyframes splashanime {
+    0%{
+        left: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    80%{
+        left: 0;
+        opacity: 0;
+    }
+    100%{
+        left: -100%;
+        opacity: 0;
+    }
+    
+}
